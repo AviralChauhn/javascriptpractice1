@@ -1,14 +1,14 @@
-function getcarage(arr){
-let oldercars=[]
-for (let index = 0; index < arr.length;index++) {
-    if(arr[index]<2000){
-        oldercars.push(arr[index])
+function getcarage(inventory, arr) {
+    let oldercars = []
+    let oldercarsname = []
+    for (let i = 0; i < arr.length; i++) {
+        if (inventory[i].car_year < 2000) {
+            oldercarsname.push(inventory[i])
+        }
     }
-}
-console.log(oldercars)
-console.log(oldercars.length)
-return oldercars;
+    console.log(oldercarsname)
 
+    console.log(oldercarsname.length)
 }
 
-module.exports ={getcarage}
+module.exports = { getcarage }
